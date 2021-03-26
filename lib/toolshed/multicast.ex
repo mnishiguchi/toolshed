@@ -97,7 +97,6 @@ defmodule Toolshed.Multicast do
         parse_igmp_lines(index, ifname, rest, [record | result])
 
       other ->
-        IO.inspect(other)
         parse_igmp_lines(index, ifname, rest, result)
     end
   end
