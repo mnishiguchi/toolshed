@@ -32,6 +32,7 @@ defmodule Toolshed.MixProject do
     [
       {:nerves_runtime, "~> 0.8", optional: true},
       {:ex_doc, "~> 0.19", only: :docs, runtime: false},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0.0", only: [:dev, :test], runtime: false}
     ]
   end
