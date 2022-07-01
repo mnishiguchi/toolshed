@@ -62,8 +62,10 @@ defmodule Toolshed do
       import Toolshed.Lsof
       unquote(nerves)
       import Toolshed.Unix
-      import Toolshed.Net
+      import Toolshed.Hostname, only: [hostname: 0]
+      import Toolshed.Ifconfig, only: [ifconfig: 0]
       import Toolshed.Misc
+      import Toolshed.Nslookup, only: [nslookup: 0]
       import Toolshed.HW
       import Toolshed.HTTP
       import Toolshed.Multicast
