@@ -1,6 +1,4 @@
-defmodule Toolshed.Weather do
-  @moduledoc ""
-
+defmodule Toolshed.Core.Weather do
   import Toolshed.Utils, only: [check_app: 1]
 
   @weather_url 'https://v2.wttr.in/?An0'
