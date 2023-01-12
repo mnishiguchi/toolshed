@@ -44,9 +44,7 @@ defmodule Toolshed do
     * `weather/0`      - get the local weather (requires networking)
 
   """
-  require Toolshed.Helper, as: H
-
-  H.include_all()
+  use Toolshed.OneBeam
 
   defmacro __using__(_) do
     quote do

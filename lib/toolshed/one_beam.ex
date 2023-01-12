@@ -1,8 +1,15 @@
-defmodule Toolshed.Helper do
+defmodule Toolshed.OneBeam do
   @moduledoc false
 
   @all_groups [:core, :nerves_runtime]
   @groups Application.compile_env(:toolshed, :only, @all_groups)
+
+  defmacro __using__(_) do
+    quote do
+      require Toolshed.OneBeam
+      Toolshed.OneBeam.include_all()
+    end
+  end
 
   defmacro include_all() do
     Path.wildcard("lib_src/**/*.ex")
